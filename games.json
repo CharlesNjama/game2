@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Subway Surfers Clone",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop",
+    "url": "https://playcanv.as/p/2OlkUaxF/",
+    "category": "action",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "2048 Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+    "url": "https://play2048.co/",
+    "category": "puzzle",
+    "featured": false
+  },
+  {
+    "id": "3",
+    "title": "Moto X3M",
+    "thumbnail": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&h=400&fit=crop",
+    "url": "https://motox3m.co/moto-x3m.html",
+    "category": "racing",
+    "featured": false
+  },
+  {
+    "id": "4",
+    "title": "Cut the Rope",
+    "thumbnail": "https://images.unsplash.com/photo-1614064006192-25920de65dd5?w=600&h=400&fit=crop",
+    "url": "https://www.cuttherope.net/play",
+    "category": "puzzle",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "title": "HexGL",
+    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop",
+    "url": "http://hexgl.bkcore.com/play/",
+    "category": "racing",
+    "featured": false
+  },
+  {
+    "id": "6",
+    "title": "Cube Slam",
+    "thumbnail": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop",
+    "url": "https://cubeslam.com/",
+    "category": "action",
+    "featured": false
+  }
+]

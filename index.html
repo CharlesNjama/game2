@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePortal - Play Free Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Play the best free online games.">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Game<span class="highlight">Portal</span></div>
+        <nav>
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="action">Action</button>
+            <button class="filter-btn" data-category="puzzle">Puzzle</button>
+            <button class="filter-btn" data-category="racing">Racing</button>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search games...">
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="heroSection">
+            <!-- Featured Game will be injected here -->
+        </section>
+
+        <section class="game-grid" id="gameGrid">
+            <!-- Game cards will be dynamically injected here via JS -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GamePortal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

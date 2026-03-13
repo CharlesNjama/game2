@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="play-mode">
+    <header class="navbar play-navbar">
+        <a href="index.html" class="back-btn">← Back to Portal</a>
+        <h1 id="gameTitle">Loading...</h1>
+        <div class="actions">
+            <!-- Options like fullscreen can go here -->
+            <button id="fullscreenBtn" class="action-btn">⛶ Fullscreen</button>
+        </div>
+    </header>
+
+    <main class="player-container">
+        <div class="iframe-wrapper">
+            <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <script>
+        // Simple logic for the play page
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameId = urlParams.get('id');
+
+            if (!gameId) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            fetch('games.json')
+                .then(response => response.json())
+                .then(games => {
+                    const game = games.find(g => g.id === gameId);
+                    if (game) {
+                        document.title = `Play ${game.title} - GamePortal`;
+                        document.getElementById('gameTitle').textContent = game.title;
+                        document.getElementById('gameFrame').src = game.url;
+                    } else {
+                        document.getElementById('gameTitle').textContent = "Game Not Found";
+                    }
+                })
+                .catch(error => console.error("Error loading game:", error));
+
+            document.getElementById('fullscreenBtn').addEventListener('click', () => {
+                const iframe = document.getElementById('gameFrame');
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
